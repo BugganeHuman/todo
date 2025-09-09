@@ -1,3 +1,4 @@
+
 body {
   background-color: rgb(33, 30, 30);
   color: aliceblue;
@@ -40,7 +41,31 @@ body {
 .li {
   white-space: pre-wrap;
 }
+#completed_tasks {
+  position: fixed;
+  right: 135px;
+  bottom: 20px;
 
-  white-space: pre-wrap;
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 7%;
+  background-color: #543e96;
+  color: bisque;
+  font-family: monospace;
 }
-
+#theme {
+  border-radius: 100%;
+  position: fixed;
+  right: 20px;
+  top: 5px;
+  padding: 10px 20px;
+  font-size: 40px;
+  border-radius: 10px;
+  border: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
