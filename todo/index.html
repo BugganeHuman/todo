@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,8 +12,10 @@
     <input id="input" type="text" placeholder="Enter your task" />
     <button id="add">Add</button>
     <ul id="list"></ul>
-
+    <button id="theme">🔆</button>
+    <button id="completed_tasks">completed tasks</button>
     <button id="readme_link">readme</button>
+
     <script>
       // 0
       let input = document.getElementById("input");
@@ -58,7 +61,19 @@
       // 7 кнопка которая видет на страницу с текстом README
       let readme = document.getElementById("readme_link");
       readme.addEventListener("click", () => {
-        window.location.href = "readme.html";
+        window.location.href = "read.html";
+      });
+      let completed_tasks = document.getElementById("completed_tasks");
+      completed_tasks.addEventListener("click", () => {
+        window.location.href = "completed_tasks.html";
+      });
+      let theme = document.getElementById("theme");
+      theme.addEventListener("click", () => {
+        if (theme.textContent === "🔆") {
+          theme.textContent = "🌙";
+        } else if (theme.textContent === "🌙") {
+          theme.textContent = "🔆";
+        }
       });
     </script>
   </body>
