@@ -20,9 +20,9 @@ body {
   font-size: 40px;
   border-radius: 10%;
 }
-#check {
-  width: 40px;
-  height: 40px;
+.check {
+  width: 25px;
+  height: 25px;
 }
 #readme_link {
   position: fixed;
@@ -40,3 +40,7 @@ body {
 .li {
   white-space: pre-wrap;
 }
+
+  white-space: pre-wrap;
+}
+
