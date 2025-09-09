@@ -1,0 +1,42 @@
+body {
+  background-color: rgb(33, 30, 30);
+  color: aliceblue;
+}
+#check1 {
+  accent-color: rgb(160, 17, 17);
+}
+#list {
+  font-family: monospace;
+  font-size: 40px;
+  width: 75%;
+}
+#input {
+  font-family: monospace;
+  font-size: 40px;
+  width: 800px;
+}
+#add {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  border-radius: 10%;
+}
+#check {
+  width: 40px;
+  height: 40px;
+}
+#readme_link {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10%;
+  background-color: #963e49;
+  color: bisque;
+  font-family: monospace;
+}
+.li {
+  white-space: pre-wrap;
+}

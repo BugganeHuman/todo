@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>readme</title>
+    <link rel="stylesheet" href="style.css" />
+    <div style="white-space: pre">
+      <style>
+        body {
+          font-size: 27px;
+          font-family: monospace;
+        }
+      </style>
+
+      English:<br />
+      This ToDo uses localStorage, which means that anyone who has access to
+      your device, or malicious software, can view your tasks. Therefore, do not
+      store passwords, personal data you are not willing to share, or any other
+      confidential and private information here. <br />
+      Russian: <br />
+      Этот ToDo использует localStorage, что означает: любое лицо, имеющее
+      доступ к вашему устройству, или вредоносное ПО может просмотреть ваши
+      задачи. Поэтому не храните здесь пароли, личные данные, которыми вы не
+      готовы делиться, а также любую конфиденциальную и приватную информацию
+      <br />
+      Chenese: <br />
+      此待办应用使用localStorage，这意味着任何能够访问您设备的人或恶意软件都可以查看您的任务
+      。因此，请不要在此存储密码、不愿共享的个人数据，以及任何机密或私人信息。
+    </div>
+    <button id="readme_link">minimize</button>
+    <script>
+      let back = document.getElementById("readme_link");
+      back.addEventListener("click", () => {
+        window.location.href = "simple-todo.html";
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="todo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>todo</title>
+  </head>
+  <body>
+    <input id="input" type="text" placeholder="Enter your task" />
+    <button id="add">Add</button>
+    <ul id="list"></ul>
+
+    <button id="readme_link">readme</button>
+    <script>
+      // 0
+      let input = document.getElementById("input");
+      let add = document.getElementById("add");
+      let list = document.getElementById("list");
+      //1
+      let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+      function render_tasks() {
+        list.innerHTML = "";
+        tasks.forEach((task, index) => {
+          const li = document.createElement("li");
+          li.className = "li";
+          li.textContent = task;
+
+          // 2  button of delete
+          const delBtn = document.createElement("input");
+          delBtn.type = "checkbox";
+          delBtn.id = "check";
+          delBtn.style.width = "25px";
+          delBtn.style.height = "25px";
+          delBtn.onclick = () => {
+            tasks.splice(index, 1);
+            saveTasks();
+            // 3 добавить в поток
+          };
+          li.appendChild(delBtn);
+          list.appendChild(li);
+        });
+      }
+      // 4 сохранить, в localStorage путем пересоздая
+      function saveTasks() {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        render_tasks();
+      } //5 добавить из значения из input
+      add.addEventListener("click", () => {
+        if (input.value.trim() !== "") {
+          tasks.push(input.value);
+          input.value = "";
+          saveTasks();
+        }
+      });
+
+      // 6 При загрузке страницы встатавить значения
+      render_tasks();
+      // 7 кнопка которая видет на страницу с текстом README
+      let readme = document.getElementById("readme_link");
+      readme.addEventListener("click", () => {
+        window.location.href = "readme.html";
+      });
+    </script>
+  </body>
+</html>
