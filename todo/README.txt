@@ -27,10 +27,6 @@ Installation / Deployment
 You can delete all completed tasks by clicking "delete all"
 there is a "readme" button that leads to a window with text about the program
 
-Clone the repository:
-git clone https://github.com/yourusername/todo-app.git
-
-
 Open index.html in any browser, or deploy the project to any static hosting service (GitHub Pages, Vercel, Netlify).
 
 Technologies Used
@@ -40,3 +36,4 @@ CSS
 JavaScript
 localStorage
 This project is open-source. Feel free to fork, modify, and deploy it for your own use.
+
