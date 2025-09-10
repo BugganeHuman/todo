@@ -17,6 +17,10 @@
     <button id="readme_link">readme</button>
 
     <script>
+      // to everyone who reads this, the comments I leave below were made for me,
+      // if I had forgotten how the code works, so I don't advise you to read them
+      // всем кто это читает, коментарие которые я оставляю ниже были сделаны
+      // для меня, если бы я забыл как работает код, так что читать их я вам не советую
       // 0
       let input = document.getElementById("input");
       let add = document.getElementById("add");
@@ -35,8 +39,15 @@
           delete_btn.type = "checkbox";
           delete_btn.className = "check";
           delete_btn.onclick = () => {
-            tasks.splice(index, 1);
-            saveTasks();
+            li.style.textDecoration = delete_btn.checked // те li у которых активен checkbox зачеркнуть
+              ? // или если по другому, если checkbox у li true то сделать первое действие, если false то второе
+                "line-through"
+              : "none";
+            setTimeout(() => {
+              tasks.splice(index, 1);
+              saveTasks();
+            }, 800);
+
             // 3 добавить в поток
           };
           li.appendChild(delete_btn);
