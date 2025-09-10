@@ -13,7 +13,7 @@
     <button id="add">Add</button>
     <ul id="list"></ul>
     <button id="theme">🔆</button>
-    <button id="completed_tasks">completed tasks</button>
+    <button id="completed_tasks_btn">completed tasks</button>
     <button id="readme_link">readme</button>
 
     <script>
@@ -44,6 +44,13 @@
                 "line-through"
               : "none";
             setTimeout(() => {
+              let completed_tasks_array =
+                JSON.parse(localStorage.getItem("completed_tasks")) || [];
+              completed_tasks_array.push(task);
+              localStorage.setItem(
+                "completed_tasks",
+                JSON.stringify(completed_tasks_array)
+              );
               tasks.splice(index, 1);
               saveTasks();
             }, 800);
@@ -84,7 +91,7 @@
       readme.addEventListener("click", () => {
         window.location.href = "read.html";
       });
-      let completed_tasks = document.getElementById("completed_tasks");
+      let completed_tasks = document.getElementById("completed_tasks_btn");
       completed_tasks.addEventListener("click", () => {
         window.location.href = "completed_tasks.html";
       });
