@@ -67,12 +67,43 @@
       completed_tasks.addEventListener("click", () => {
         window.location.href = "completed_tasks.html";
       });
+      let last_theme_local = localStorage.getItem("last_theme");
+      let last_theme = "🌙";
+
       let theme = document.getElementById("theme");
+      if (last_theme_local === "🔆") {
+        document.body.style.backgroundColor = "aliceblue";
+        document.body.style.color = "black";
+        theme.textContent = "🌙";
+      } else if (last_theme_local === "🌙") {
+        document.body.style.color = "aliceblue";
+        document.body.style.backgroundColor = "rgb(33, 30, 30)";
+        input.style.backgroundColor = "";
+        input.style.color = "";
+        add.style.backgroundColor = "";
+        add.style.color = "";
+      }
       theme.addEventListener("click", () => {
         if (theme.textContent === "🔆") {
           theme.textContent = "🌙";
+          document.body.style.backgroundColor = "aliceblue";
+          document.body.style.color = "black";
+          //input.style.backgroundColor = "rgb(33, 30, 30)";
+          //input.style.color = "aliceblue";
+          //add.style.backgroundColor = "rgb(33, 30, 30)";
+          //add.style.color = "aliceblue";
+          let last_theme = "🔆";
+          localStorage.setItem("last_theme", last_theme);
         } else if (theme.textContent === "🌙") {
           theme.textContent = "🔆";
+          document.body.style.color = "aliceblue";
+          document.body.style.backgroundColor = "rgb(33, 30, 30)";
+          input.style.backgroundColor = "";
+          input.style.color = "";
+          add.style.backgroundColor = "";
+          add.style.color = "";
+          let last_theme = "🌙";
+          localStorage.setItem("last_theme", last_theme);
         }
       });
     </script>
