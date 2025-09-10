@@ -42,7 +42,7 @@ body {
 .li {
   white-space: pre-wrap;
 }
-#completed_tasks {
+#completed_tasks_btn {
   position: fixed;
   right: 135px;
   bottom: 20px;
@@ -70,4 +70,21 @@ body {
   color: #fff;
   cursor: pointer;
 }
+#delete_all_btn {
+  position: fixed;
+  right: 20px;
+  top: 20px;
 
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10%;
+  background-color: #963e49;
+  color: bisque;
+  font-family: monospace;
+}
+#list_of_completed_tasks {
+  font-family: monospace;
+  font-size: 40px;
+  width: 75%;
+}
