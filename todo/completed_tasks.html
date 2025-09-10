@@ -8,9 +8,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="completed_tasks">back to ToDo</button>
+    <button id="completed_tasks_btn">back to ToDo</button>
+    <ul id="list_of_completed_tasks"></ul>
+    <button id="delete_all_btn">delete all</button>
+
     <script>
-      let back = document.getElementById("completed_tasks");
+      let list_compl = document.getElementById("list_of_completed_tasks");
+      let completed_tasks =
+        JSON.parse(localStorage.getItem("completed_tasks")) || [];
+      completed_tasks.forEach((compl_task) => {
+        let li_compl = document.createElement("li");
+        li_compl.textContent = compl_task;
+        list_compl.prepend(li_compl);
+      });
+
+      //
+      let back = document.getElementById("completed_tasks_btn");
       back.addEventListener("click", () => {
         window.location.href = "index.html";
       });
@@ -18,15 +31,15 @@
       if (last_theme_local === "🔆") {
         document.body.style.backgroundColor = "aliceblue";
         document.body.style.color = "black";
-        theme.textContent = "🌙";
       } else if (last_theme_local === "🌙") {
         document.body.style.color = "aliceblue";
         document.body.style.backgroundColor = "rgb(33, 30, 30)";
-        input.style.backgroundColor = "";
-        input.style.color = "";
-        add.style.backgroundColor = "";
-        add.style.color = "";
       }
+      let delete_all_btn = document.getElementById("delete_all_btn");
+      delete_all_btn.addEventListener("click", () => {
+        list_compl.innerHTML = "";
+        localStorage.removeItem("completed_tasks");
+      });
     </script>
   </body>
 </html>
