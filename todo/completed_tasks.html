@@ -14,6 +14,19 @@
       back.addEventListener("click", () => {
         window.location.href = "index.html";
       });
+      let last_theme_local = localStorage.getItem("last_theme");
+      if (last_theme_local === "🔆") {
+        document.body.style.backgroundColor = "aliceblue";
+        document.body.style.color = "black";
+        theme.textContent = "🌙";
+      } else if (last_theme_local === "🌙") {
+        document.body.style.color = "aliceblue";
+        document.body.style.backgroundColor = "rgb(33, 30, 30)";
+        input.style.backgroundColor = "";
+        input.style.color = "";
+        add.style.backgroundColor = "";
+        add.style.color = "";
+      }
     </script>
   </body>
 </html>
