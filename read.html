@@ -17,26 +17,49 @@
     </style>
     <div style="white-space: pre">
       link to repository -
-      <a
-        href="https://github.com/BugganeHuman/todo"
-        target="_blank"
+      <a href="https://github.com/BugganeHuman/todo" target="_blank"
         >https://github.com/BugganeHuman/todo</a
       ><br />
       English:<br />
-      This ToDo uses localStorage, which means that anyone who has access to
-      your device, or malicious software, can view your tasks. Therefore, do not
-      store passwords, personal data you are not willing to share, or any other
-      confidential and private information here. this todo is open source which
-      you can find on my GitHub, so if you don't like something you can rewrite
-      the existing code and deploy it yourself <br />
-      Russian: <br />
+      This ToDo uses localStorage, which means that anyone with access to your
+      device—or malicious software—can view your tasks. Therefore, do not store
+      passwords, personal data you don’t want to share, or any other
+      confidential information here. This ToDo is open source and available on
+      my GitHub, so if you don’t like something, you can modify the existing
+      code and deploy it yourself.<br />
+      Functionality:<br />
+      - Clicking the sun button and then the crescent moon allows you to switch
+      the theme (light / dark).<br />
+      - Clicking the Work button opens a separate window with an identical ToDo,
+      created for programming or work-related tasks (you can use it however you
+      like).<br />
+      - Clicking the Completed Tasks button opens a window with your completed
+      tasks. I created this section in case you accidentally delete a task and
+      don’t want to rewrite it, and also to review what you’ve already done.
+      This window also has a Delete All button, which removes all completed
+      tasks.<br />
+      - The Readme button leads to this page. <br />
+      Russian:
+      <br />
       Этот ToDo использует localStorage, что означает, что любой, кто имеет
-      доступ к вашему устройству, или вредоносное ПО, может просмотреть ваши
+      доступ к вашему устройству или вредоносное ПО, может просмотреть ваши
       задачи. Поэтому не храните здесь пароли, личные данные, которыми вы не
-      готовы делиться, или любую другую конфиденциальную информацию. у этого
-      todo открытый исходный код, который вы можете найти на моём GitHub, так
+      готовы делиться, или любую другую конфиденциальную информацию. У этого
+      ToDo открытый исходный код, который вы можете найти на моём GitHub, так
       что если вам что-то не нравится, вы можете переписать существующий код и
-      задеплоить его самостоятельно
+      задеплоить его самостоятельно.<br />
+      Функционал:<br />
+      - Нажав на кнопку солнца и далее полумесяца, вы можете менять тему
+      (светлая / темная).<br />
+      - Нажав на кнопку Work, вы окажетесь в окне с идентичным ToDo, но только я
+      его создавал для задач, связанных с программированием и т.п. (вы можете
+      использовать его как угодно).<br />
+      - Нажав на кнопку completed tasks, вы увидите ваши выполненные задачи. Я
+      создал этот раздел на случай, если случайно удалю задачу и переписывать её
+      лень, а также чтобы просто посмотреть, что уже сделано. В этом окне есть
+      кнопка Delete All, которая удалит все выполненные задачи.<br />
+      - Кнопка Readme ведёт на эту страницу.
+
       <br />
     </div>
     <button id="readme_link">back to ToDo</button>
@@ -50,7 +73,6 @@
       if (last_theme_local === "🔆") {
         document.body.style.backgroundColor = "aliceblue";
         document.body.style.color = "black";
-        theme.textContent = "🌙";
       } else if (last_theme_local === "🌙") {
         document.body.style.color = "aliceblue";
         document.body.style.backgroundColor = "rgb(33, 30, 30)";
@@ -58,10 +80,3 @@
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
