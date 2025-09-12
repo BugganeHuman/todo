@@ -3,9 +3,7 @@ body {
   background-color: rgb(33, 30, 30);
   color: aliceblue;
 }
-#check1 {
-  accent-color: rgb(160, 17, 17);
-}
+
 #list {
   font-family: monospace;
   font-size: 40px;
@@ -88,4 +86,50 @@ body {
   width: 75%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#btn_work {
+  position: fixed;
+  right: 350px;
+  bottom: 20px;
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10%;
+  background-color: #c05a24;
+  color: bisque;
+  font-family: monospace;
+}
+#back_to_index_in_work {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10%;
+  background-color: #c05a24;
+  color: bisque;
+  font-family: monospace;
+}
+#list_w {
+  font-family: monospace;
+  font-size: 40px;
+  width: 75%;
+}
+#input_w {
+  font-family: monospace;
+  font-size: 40px;
+  width: 800px;
+  margin-left: 25%;
+}
+#add_w {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  border-radius: 10%;
+}
+.check_w {
+  width: 30px;
+  height: 30px;
+  accent-color: rgb(110, 3, 233);
 }
