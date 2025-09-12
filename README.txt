@@ -5,7 +5,7 @@
 
 2: Uses localStorage to remember tasks
 
-3: Clone the repository:
+3: Clone the repository with command:
    git clone https://github.com/BugganeHuman/todo.git
    Open the project
    No special installation is required, since this is a pure HTML/CSS/JS project.
@@ -17,6 +17,7 @@
    Push the repository to your GitHub account.
    Go to Settings → Pages → Source → main branch.
    Open the URL provided by GitHub Pages. 
+
 
 
 
