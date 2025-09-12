@@ -15,6 +15,7 @@
     <button id="theme">🔆</button>
     <button id="completed_tasks_btn">completed tasks</button>
     <button id="readme_link">readme</button>
+    <button id="btn_work">work</button>
 
     <script>
       // to everyone who reads this, the comments I leave below were made for me,
@@ -134,8 +135,10 @@
           localStorage.setItem("last_theme", last_theme);
         }
       });
+      let btn_work = document.getElementById("btn_work");
+      btn_work.addEventListener("click", () => {
+        window.location.href = "work.html";
+      });
     </script>
   </body>
 </html>
-
-
