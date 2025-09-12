@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" href="./todo_logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input id="input_w" type="text" placeholder="Enter your task" />
+    <button id="add_w">Add</button>
+    <ul id="list_w"></ul>
+    <button id="back_to_index_in_work">back to ToDo</button>
+    <script>
+      let to_index = document.getElementById("back_to_index_in_work");
+      to_index.addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+      let input_w = document.getElementById("input_w");
+      let add_w = document.getElementById("add_w");
+      let list_w = document.getElementById("list_w");
+      let tasks_w = JSON.parse(localStorage.getItem("tasks_w")) || [];
+      function render_tasks_w() {
+        list_w.innerHTML = "";
+        tasks_w.forEach((task_w, index_w) => {
+          const li_w = document.createElement("li");
+          li_w.className = "li_w";
+          li_w.textContent = task_w;
+          //delete btn
+
+          const delete_btn_w = document.createElement("input");
+          delete_btn_w.type = "checkbox";
+          delete_btn_w.className = "check_w";
+          delete_btn_w.onclick = () => {
+            li_w.style.textDecoration = delete_btn_w.checked
+              ? "line-through"
+              : "none";
+            setTimeout(() => {
+              let completed_tasks_array =
+                JSON.parse(localStorage.getItem("completed_tasks")) || [];
+              completed_tasks_array.push(task_w);
+              localStorage.setItem(
+                "completed_tasks",
+                JSON.stringify(completed_tasks_array)
+              );
+              tasks_w.splice(index_w, 1);
+              saveTasks();
+            }, 800);
+          };
+          li_w.appendChild(delete_btn_w);
+          list_w.appendChild(li_w);
+        });
+      }
+      //  сохранить, в localStorage путем пересоздания
+      function saveTasks() {
+        localStorage.setItem("tasks_w", JSON.stringify(tasks_w));
+        render_tasks_w();
+      }
+      function push_to_tasks() {
+        if (input_w.value.trim() !== "") {
+          tasks_w.push(input_w.value);
+          input_w.value = "";
+          saveTasks();
+        }
+      }
+      // добавить из значения из input
+      add_w.addEventListener("click", () => {
+        push_to_tasks();
+      });
+      //
+      input_w.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          push_to_tasks();
+        }
+      });
+      //  При загрузке страницы встатавить значения
+      render_tasks_w();
+
+      //
+      let last_theme_local = localStorage.getItem("last_theme");
+      if (last_theme_local === "🔆") {
+        document.body.style.backgroundColor = "aliceblue";
+        document.body.style.color = "black";
+        theme.textContent = "🌙";
+      } else if (last_theme_local === "🌙") {
+        document.body.style.color = "aliceblue";
+        document.body.style.backgroundColor = "rgb(33, 30, 30)";
+      }
+    </script>
+  </body>
+</html>
