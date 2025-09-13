@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +18,13 @@
       to_index.addEventListener("click", () => {
         window.location.href = "index.html";
       });
+      to_index.addEventListener("mousedown", () => {
+        to_index.style.bottom = "17px";
+      });
+      document.addEventListener("mouseup", () => {
+        to_index.style.bottom = "20px";
+      });
+
       let input_w = document.getElementById("input_w");
       let add_w = document.getElementById("add_w");
       let list_w = document.getElementById("list_w");
@@ -64,6 +72,7 @@
           saveTasks();
         }
       }
+
       // добавить из значения из input
       add_w.addEventListener("click", () => {
         push_to_tasks();
@@ -83,6 +92,7 @@
       if (last_theme_local === "🔆") {
         document.body.style.backgroundColor = "aliceblue";
         document.body.style.color = "black";
+        theme.textContent = "🌙";
       } else if (last_theme_local === "🌙") {
         document.body.style.color = "aliceblue";
         document.body.style.backgroundColor = "rgb(33, 30, 30)";
@@ -90,5 +100,3 @@
     </script>
   </body>
 </html>
-
-
