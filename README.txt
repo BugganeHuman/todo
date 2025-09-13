@@ -2,6 +2,7 @@
    With functions for adding and deleting tasks. There is a separate "work" button that leads to the same todo in terms of functionality but a slightly different design
    (this is done to separate work tasks and just everyday ones), there is a "completed tasks" button that leads to a window with all deleted tasks
    (from the main todo and "work"), there is a "readme" button that leads to the text with a description of the project and a link to the repository.
+   the buttons have a click effect
 
 2: Uses localStorage to remember tasks
 
@@ -23,6 +24,7 @@
 **BugganeHuman**
 GitHub:   https://github.com/BugganeHuman
 Email:    bugganehuman@gmail.com
+
 
 
 
