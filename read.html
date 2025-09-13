@@ -64,8 +64,14 @@
     </div>
     <button id="readme_link">back to ToDo</button>
     <script>
-      let back = document.getElementById("readme_link");
-      back.addEventListener("click", () => {
+      let back_to_todo_btn = document.getElementById("readme_link");
+      back_to_todo_btn.addEventListener("mousedown", () => {
+        back_to_todo_btn.style.bottom = "17px";
+      });
+      document.addEventListener("mouseup", () => {
+        back_to_todo_btn.style.bottom = "20px";
+      });
+      back_to_todo_btn.addEventListener("click", () => {
         window.location.href = "index.html";
       });
       //
