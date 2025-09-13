@@ -89,10 +89,24 @@
       render_tasks();
       // 7 кнопка которая видет на страницу с текстом README
       let readme = document.getElementById("readme_link");
+      readme.addEventListener("mousedown", () => {
+        readme.style.bottom = "17px";
+      });
+      // анимация нажатия кнопки
+      document.addEventListener("mouseup", () => {
+        readme.style.bottom = "20px";
+      });
+
       readme.addEventListener("click", () => {
         window.location.href = "read.html";
       });
       let completed_tasks = document.getElementById("completed_tasks_btn");
+      completed_tasks.addEventListener("mousedown", () => {
+        completed_tasks.style.bottom = "17px";
+      });
+      document.addEventListener("mouseup", () => {
+        completed_tasks.style.bottom = "20px";
+      });
       completed_tasks.addEventListener("click", () => {
         window.location.href = "completed_tasks.html";
       });
@@ -136,6 +150,12 @@
         }
       });
       let btn_work = document.getElementById("btn_work");
+      btn_work.addEventListener("mousedown", () => {
+        btn_work.style.bottom = "17px";
+      });
+      document.addEventListener("mouseup", () => {
+        btn_work.style.bottom = "20px";
+      });
       btn_work.addEventListener("click", () => {
         window.location.href = "work.html";
       });
