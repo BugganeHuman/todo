@@ -29,8 +29,14 @@
       });
 
       //
-      let back = document.getElementById("completed_tasks_btn");
-      back.addEventListener("click", () => {
+      let back_btn = document.getElementById("completed_tasks_btn");
+      back_btn.addEventListener("mousedown", () => {
+        back_btn.style.bottom = "17px";
+      });
+      document.addEventListener("mouseup", () => {
+        back_btn.style.bottom = "20px";
+      });
+      back_btn.addEventListener("click", () => {
         window.location.href = "index.html";
       });
       let last_theme_local = localStorage.getItem("last_theme");
@@ -41,7 +47,14 @@
         document.body.style.color = "aliceblue";
         document.body.style.backgroundColor = "rgb(33, 30, 30)";
       }
+
       let delete_all_btn = document.getElementById("delete_all_btn");
+      delete_all_btn.addEventListener("mousedown", () => {
+        delete_all_btn.style.bottom = "17px";
+      });
+      document.addEventListener("mouseup", () => {
+        delete_all_btn.style.bottom = "20px";
+      });
       delete_all_btn.addEventListener("click", () => {
         list_compl.innerHTML = "";
         localStorage.removeItem("completed_tasks");
@@ -49,5 +62,3 @@
     </script>
   </body>
 </html>
-
-
