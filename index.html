@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,6 +57,26 @@
 
             // 3 добавить в поток
           };
+          //color: rgb(138, 213, 0);color: rgb(92, 136, 8); mb
+          const arrow_up = document.createElement("button");
+          arrow_up.textContent = " ⇧";
+          arrow_up.className = "btns_up_down";
+          arrow_up.addEventListener("click", () => {
+            if (li.previousElementSibling) {
+              li.parentNode.insertBefore(li, li.previousSibling);
+            }
+          });
+          const arrow_down = document.createElement("button");
+          arrow_down.textContent = "⇩";
+          arrow_down.className = "btns_up_down";
+          arrow_down.addEventListener("click", () => {
+            if (li.nextElementSibling) {
+              li.parentNode.insertBefore(li.nextElementSibling, li);
+            }
+          });
+          li.appendChild(arrow_up);
+          li.appendChild(arrow_down);
+
           li.appendChild(delete_btn);
           list.appendChild(li);
         });
