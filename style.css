@@ -142,3 +142,7 @@ body {
   font-size: 30px;
   color: rgb(178, 23, 23);
 }
+ul li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
