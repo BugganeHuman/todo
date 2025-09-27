@@ -59,19 +59,28 @@
           //color: rgb(138, 213, 0);color: rgb(92, 136, 8); mb
           const arrow_up = document.createElement("button");
           arrow_up.textContent = " ⇧";
-          arrow_up.className = "btns_up_down";
-          arrow_up.addEventListener("click", () => {
-            if (li_w.previousElementSibling) {
-              li_w.parentNode.insertBefore(li_w, li_w.previousSibling);
-            }
-          });
           const arrow_down = document.createElement("button");
           arrow_down.textContent = "⇩";
-          arrow_down.className = "btns_up_down";
+          arrow_up.className = "btns_up_down";
           arrow_down.addEventListener("click", () => {
-            if (li_w.nextElementSibling) {
-              li_w.parentNode.insertBefore(li_w.nextElementSibling, li_w);
+            if (index_w > 0) {
+              [tasks_w[index_w - 1], tasks_w[index_w]] = [
+                tasks_w[index_w],
+                tasks_w[index_w - 1],
+              ];
+              saveTasks();
             }
+          });
+          arrow_down.className = "btns_up_down";
+          arrow_up.addEventListener("click", () => {
+            if (index_w < tasks_w.length - 1) {
+              [tasks_w[index_w], tasks_w[index_w + 1]] = [
+                tasks_w[index_w + 1],
+                tasks_w[index_w],
+              ];
+              saveTasks();
+            }
+            // я не знаю почему оно работает только так,ибо если делать поправильному - оно не работает
           });
           li_w.appendChild(arrow_up);
           li_w.appendChild(arrow_down);
