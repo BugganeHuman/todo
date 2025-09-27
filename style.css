@@ -133,3 +133,12 @@ body {
   height: 30px;
   accent-color: rgb(110, 3, 233);
 }
+.btns_up_down {
+  border: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: transparent;
+  color: #fff;
+  font-size: 30px;
+  color: rgb(178, 23, 23);
+}
