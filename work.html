@@ -56,6 +56,25 @@
               saveTasks();
             }, 800);
           };
+          //color: rgb(138, 213, 0);color: rgb(92, 136, 8); mb
+          const arrow_up = document.createElement("button");
+          arrow_up.textContent = " ⇧";
+          arrow_up.className = "btns_up_down";
+          arrow_up.addEventListener("click", () => {
+            if (li_w.previousElementSibling) {
+              li_w.parentNode.insertBefore(li_w, li_w.previousSibling);
+            }
+          });
+          const arrow_down = document.createElement("button");
+          arrow_down.textContent = "⇩";
+          arrow_down.className = "btns_up_down";
+          arrow_down.addEventListener("click", () => {
+            if (li_w.nextElementSibling) {
+              li_w.parentNode.insertBefore(li_w.nextElementSibling, li_w);
+            }
+          });
+          li_w.appendChild(arrow_up);
+          li_w.appendChild(arrow_down);
           li_w.appendChild(delete_btn_w);
           list_w.prepend(li_w);
         });
@@ -99,5 +118,3 @@
     </script>
   </body>
 </html>
-
-
