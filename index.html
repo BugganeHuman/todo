@@ -63,7 +63,7 @@
           const arrow_up = document.createElement("button");
           arrow_up.textContent = " ⇧";
           arrow_up.className = "btns_up_down";
-          arrow_up.addEventListener("click", () => {
+          arrow_down.addEventListener("click", () => {
             if (index > 0) {
               [tasks[index - 1], tasks[index]] = [
                 tasks[index],
@@ -74,7 +74,7 @@
           });
           arrow_down.textContent = "⇩";
           arrow_down.className = "btns_up_down";
-          arrow_down.addEventListener("click", () => {
+          arrow_up.addEventListener("click", () => {
             if (index < tasks.length - 1) {
               [tasks[index], tasks[index + 1]] = [
                 tasks[index + 1],
@@ -190,6 +190,7 @@
     </script>
   </body>
 </html>
+
 
 
 
