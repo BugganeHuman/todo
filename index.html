@@ -63,7 +63,7 @@
           const arrow_up = document.createElement("button");
           arrow_up.textContent = " ⇧";
           arrow_up.className = "btns_up_down";
-          arrow_down.addEventListener("click", () => {
+          arrow_up.addEventListener("click", () => {
             if (index > 0) {
               [tasks[index - 1], tasks[index]] = [
                 tasks[index],
@@ -190,5 +190,6 @@
     </script>
   </body>
 </html>
+
 
 
