@@ -59,10 +59,11 @@
             // 3 добавить в поток
           };
           //color: rgb(138, 213, 0);color: rgb(92, 136, 8); mb
+          const arrow_down = document.createElement("button");
           const arrow_up = document.createElement("button");
           arrow_up.textContent = " ⇧";
           arrow_up.className = "btns_up_down";
-          arrow_up.addEventListener("click", () => {
+          arrow_down.addEventListener("click", () => {
             if (index > 0) {
               [tasks[index - 1], tasks[index]] = [
                 tasks[index],
@@ -71,7 +72,6 @@
               saveTasks();
             }
           });
-          const arrow_down = document.createElement("button");
           arrow_down.textContent = "⇩";
           arrow_down.className = "btns_up_down";
           arrow_down.addEventListener("click", () => {
@@ -190,4 +190,5 @@
     </script>
   </body>
 </html>
+
 
